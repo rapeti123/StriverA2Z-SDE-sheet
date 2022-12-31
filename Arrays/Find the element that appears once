@@ -1,0 +1,30 @@
+class Sol
+{
+    public static int search(int A[], int N)
+    { 
+        int number=0;
+        /* brute force approach using HashMap
+        HashMap<Integer,Integer> hs=new HashMap<>();   
+        int p=-1;
+        for(int i=0;i<N;i++)
+         if(hs.containsKey(A[i])){
+             hs.put(A[i],hs.get(A[i])+1);
+         } 
+         else 
+             hs.put(A[i],1);  
+        for(int k:hs.keySet()){ 
+            if(hs.get(k)==1){
+               p=k; 
+               break;
+            }
+        }
+        return p;
+        
+       */ 
+       // optimal approach using XOR operation 
+        for(int i=0;i<N;i++){
+            number=number^A[i];
+        } 
+        return number;
+    }
+}
