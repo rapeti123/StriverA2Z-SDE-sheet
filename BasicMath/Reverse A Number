@@ -1,0 +1,15 @@
+class Solution {
+    static Long reversedBits(Long X) {
+        int k=1;
+        long rem,rev;
+        rem=0;
+        rev=0;
+        while(k<=32){
+            rem=X%2; ## to extract last digit of binary format
+            rev=rev*2+rem; ## to reverse the binary digit to decimal 
+            X=X/2; ## to extract next digit in the binary number 
+            k++;
+        }
+         return rev;
+    }
+};
